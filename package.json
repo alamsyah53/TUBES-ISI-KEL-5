@@ -1,0 +1,14 @@
+{
+  "name": "hardhat-project",
+  "version": "1.0.0",
+  "description": "Web3 Sensor Monitoring",
+  "scripts": {
+    "start": "npx lite-server"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.24.3",
+    "lite-server": "^2.6.1"
+  }
+}
+

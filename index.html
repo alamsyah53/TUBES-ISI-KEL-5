@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistem Monitoring Gudang Beras</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/ethers/dist/ethers.umd.min.js"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f0fdf4;
+      color: #1f2937;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: linear-gradient(to right, #166534, #22c55e);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.5em;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+    button {
+      background: #16a34a;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    button:hover {
+      background: #15803d;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+    }
+    th, td {
+      border: 1px solid #d1d5db;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background-color: #d1fae5;
+    }
+    canvas {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>✨ Sistem Monitoring Kelembaban dan Suhu Gudang Beras Berbasis SHT20 & Blockchain ✨</h1>
+    <p>Menjamin kualitas penyimpanan beras dengan teknologi modern</p>
+  </header>
+
+  <div class="container">
+	<p id="status" style="font-weight: bold; color: #065f46; margin-bottom: 10px;">📡 Menunggu koneksi ke MetaMask...</p>
+
+    <button onclick="loadSensorData()">🔄 Muat Data dari Blockchain</button>
+
+    <table id="sensorTable">
+      <thead>
+        <tr>
+          <th>Waktu</th>
+          <th>ID Sensor</th>
+          <th>Lokasi</th>
+          <th>Tahap</th>
+          <th>Suhu (°C)</th>
+          <th>Kelembaban (%)</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <canvas id="chart" height="300"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

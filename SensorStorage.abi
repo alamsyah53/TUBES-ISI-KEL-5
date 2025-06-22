@@ -1,0 +1,29 @@
+[
+  {
+    "anonymous": false,
+    "inputs": [
+      { "indexed": false, "internalType": "uint256", "name": "timestamp", "type": "uint256" },
+      { "indexed": false, "internalType": "string", "name": "sensorId", "type": "string" },
+      { "indexed": false, "internalType": "string", "name": "location", "type": "string" },
+      { "indexed": false, "internalType": "string", "name": "stage", "type": "string" },
+      { "indexed": false, "internalType": "int256", "name": "temperature", "type": "int256" },
+      { "indexed": false, "internalType": "int256", "name": "humidity", "type": "int256" }
+    ],
+    "name": "DataStored",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "timestamp", "type": "uint256" },
+      { "internalType": "string", "name": "sensorId", "type": "string" },
+      { "internalType": "string", "name": "location", "type": "string" },
+      { "internalType": "string", "name": "stage", "type": "string" },
+      { "internalType": "int256", "name": "temperature", "type": "int256" },
+      { "internalType": "int256", "name": "humidity", "type": "int256" }
+    ],
+    "name": "storeData",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]
